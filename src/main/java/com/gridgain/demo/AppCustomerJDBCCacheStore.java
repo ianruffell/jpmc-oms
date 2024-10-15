@@ -40,7 +40,7 @@ public class AppCustomerJDBCCacheStore implements CompletionListener {
 		String ln = Faker.instance().name().lastName();
 		String cn = "acme";
 
-		Customers c = new Customers(1000, fn + "." + ln + "@" + cn + ".com", fn + " " + ln);
+		Customers c = new Customers(1000, fn.toLowerCase() + "." + ln.toLowerCase() + "@" + cn + ".com", fn + " " + ln);
 		cache.put(c.getCustomerId(), c);
 	}
 
